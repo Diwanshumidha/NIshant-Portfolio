@@ -1,5 +1,4 @@
 import ResumePDF from "@/Components/Resume/Resume";
-import { PDFViewer } from "@react-pdf/renderer";
 
 const Resume = () => {
   return (

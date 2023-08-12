@@ -1,4 +1,3 @@
-"use client"
 import Navbar from '@/Components/Navbar/Navbar'
 import './globals.css'
 import { Inter } from 'next/font/google'
@@ -21,9 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar/>
-        <ParallaxProvider>
+        
         {children}
-        </ParallaxProvider>
+     
         <Footer/>
       </body>
     </html>

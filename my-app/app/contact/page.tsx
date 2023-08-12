@@ -9,6 +9,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import { GiBatMask } from "react-icons/gi";
 import emailjs from '@emailjs/browser';
 import { BsDiscord } from "react-icons/bs";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 const Page = () => {
   const [name, setName] = useState("");
@@ -24,7 +25,7 @@ const Page = () => {
   };
 
 
-  const handleSubmit = (e) =>{
+  const handleSubmit = (e:React.FormEvent<HTMLFormElement>) =>{
     e.preventDefault()
     alert(email + ' ' + name)
     emailjs.send("service_kvcbi49","template_9xsnw15",{
@@ -40,6 +41,7 @@ const Page = () => {
   }
 
   return (
+
     <section id="contact" className="bg-black min-h-screen mb-7">
       <h1 className="section-header text-center my-0 p-0 md:py-28 text-2 max-sm:pt-10 sm:text-3 md:text-4 font-light  text-white uppercase tracking-widest">
         Bat-Signal
@@ -192,6 +194,7 @@ const Page = () => {
         </div>
       </div>
     </section>
+
   );
 };
 

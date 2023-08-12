@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 import React, { useEffect } from 'react'
-import { Parallax } from 'react-scroll-parallax'
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
 import AOS from 'aos';
 
 
@@ -11,6 +11,9 @@ const HeroSection = () => {
     AOS.init()
   },[])
   return (
+    <ParallaxProvider>
+
+   
     <div className=' w-full h-screen flex flex-col justify-center items-center'>
     <Parallax speed={30}>
     <div className='flex flex-col justify-center items-center gap-9'>
@@ -27,6 +30,7 @@ const HeroSection = () => {
     </div>
     </Parallax>
   </div>
+  </ParallaxProvider>
   )
 }
 
